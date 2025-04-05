@@ -12,7 +12,7 @@ export default function Page() {
           <HeroBanner />
         </div>
         <div className="flex justify-center">
-          <CTAButton text="Start Planning!" />
+          <CTAButton text="Start Planning!" link="/create-trip" />
         </div>
         <div className="mb-16"></div>
       </div>
