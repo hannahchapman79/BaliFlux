@@ -1,4 +1,7 @@
+"use client";
+
 import HeroBanner from "@/components/home/HeroBanner";
+import CTAButton from "@/components/UI/CTAButton";
 
 export default function Page() {
   return (
@@ -7,6 +10,9 @@ export default function Page() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="mt-8 flex flex-col sm:flex-row gap-4"></div>
           <HeroBanner />
+        </div>
+        <div className="flex justify-center">
+          <CTAButton text="Start Planning!" />
         </div>
         <div className="mb-16"></div>
       </div>
