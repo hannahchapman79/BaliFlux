@@ -1,59 +1,115 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleNavbar = () => setIsOpen(!isOpen);
+
+  const handleClose = () => setIsOpen(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsOpen(false);
-      }
+      if (window.innerWidth >= 768) setIsOpen(false);
     };
 
     window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Prevent scrolling when mobile menu is open
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      document.body.style.overflow = "auto";
     };
-  }, []);
+  }, [isOpen]);
 
   const isActive = (path: string) => pathname === path;
 
-  return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-[#1A1F24]/80 backdrop-blur-md rounded-full px-6 py-3 z-[1000] shadow-lg flex items-center justify-between w-[90%] max-w-4xl">
-      <Link href="/" className="text-[1.6rem] font-semibold text-accent">
-        BaliFlux
-      </Link>
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "Create trip", href: "/create-trip" },
+    { label: "Blog", href: "/blog" },
+  ];
 
-      <ul className="flex space-x-6">
-        {["Home", "Create trip", "Blog"].map((label, idx) => {
-          const href =
-            label === "Home"
-              ? "/"
-              : `/${label.toLowerCase().replace(" ", "-")}`;
-          return (
-            <li key={idx}>
+  return (
+    <nav
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 bg-[#1A1F24]/80 backdrop-blur-md z-[1000] shadow-lg w-[90%] max-w-4xl ${
+        isOpen ? "rounded-xl py-4" : "rounded-full py-3"
+      } px-6`}
+      style={{ transition: "height 0.3s, padding 0.3s" }}
+    >
+      <div className="flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-[1.6rem] font-semibold text-accent"
+          onClick={handleClose}
+        >
+          BaliFlux
+        </Link>
+
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex space-x-6">
+          {navItems.map(({ label, href }) => (
+            <li key={href}>
               <Link
                 href={href}
-                className="relative text-[1.3rem] font-light px-4 py-2 text-offwhite hover:text-[#e7d7c1] transition-colors duration-200"
+                className={`relative text-[1.3rem] font-light px-4 py-2 transition-colors duration-200 ${
+                  isActive(href)
+                    ? "text-accent font-medium"
+                    : "text-offwhite hover:text-[#e7d7c1]"
+                }`}
+                onClick={handleClose}
               >
                 {label}
-                <span className="absolute left-0 bottom-1 h-[3px] w-0 bg-accent transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+
+        {/* Mobile toggle button */}
+        <button
+          className="md:hidden text-offwhite focus:outline-none"
+          onClick={toggleNavbar}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden mt-4 border-t border-gray-700/50 pt-3">
+          <ul className="flex flex-col space-y-3">
+            {navItems.map(({ label, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`block text-[1.2rem] font-light px-4 py-2 rounded-md transition-colors duration-200 ${
+                    isActive(href)
+                      ? "bg-accent/10 text-accent font-medium"
+                      : "text-offwhite hover:bg-white/5 hover:text-[#e7d7c1]"
+                  }`}
+                  onClick={handleClose}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
