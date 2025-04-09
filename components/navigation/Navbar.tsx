@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 bg-[#1A1F24]/80 backdrop-blur-md z-[1000] shadow-lg w-[90%] max-w-4xl ${
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-[#1A1F24]/80 backdrop-blur-md z-[1000] shadow-lg w-[90%] max-w-4xl ${
         isOpen ? "rounded-xl py-4" : "rounded-full py-3"
       } px-6`}
       style={{ transition: "height 0.3s, padding 0.3s" }}
