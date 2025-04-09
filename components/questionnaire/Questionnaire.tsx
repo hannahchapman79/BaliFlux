@@ -25,9 +25,9 @@ export default function Questionnaire({
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-10 m-5">
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">{currentQuestion.question}</h2>
+        <h2 className="text-xl font-normal mt-3">{currentQuestion.question}</h2>
 
         {isDaysInTripQuestion ? (
           <input
@@ -73,7 +73,7 @@ export default function Questionnaire({
           onClick={() =>
             setCurrentQuestionIndex((prev) => Math.max(prev - 1, 0))
           }
-          className="px-4 py-2 bg-gray-500 text-white rounded-xl"
+          className="px-6 py-2 bg-gray-500 text-white rounded-xl"
           disabled={currentQuestionIndex === 0}
         >
           Back
@@ -83,14 +83,14 @@ export default function Questionnaire({
           <button
             type="button"
             onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}
-            className="px-4 py-2 bg-blue-500 text-white rounded-xl"
+            className="px-6 py-2 bg-blue-500 text-white rounded-xl"
           >
             Next
           </button>
         ) : (
           <button
             type="submit"
-            className="px-4 py-2 bg-green-600 text-white rounded-xl"
+            className="px-6 py-2 bg-green-600 text-white rounded-xl"
           >
             Submit
           </button>

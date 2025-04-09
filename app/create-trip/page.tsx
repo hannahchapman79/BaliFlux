@@ -5,8 +5,7 @@ export default async function QuestionnairePage() {
   const { questions } = await fetchQuestions();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <title>Create trip!</title>
+    <div className="flex flex-col items-center justify-center py-2">
       <Questionnaire questions={questions} />
     </div>
   );
