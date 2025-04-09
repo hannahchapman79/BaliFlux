@@ -16,7 +16,7 @@ export default function ImageTile({
         `}
     >
       <img
-          src={imageUrl}
+        src={imageUrl}
         alt={label}
         className="w-full h-24 object-cover rounded-xl mb-2"
       />

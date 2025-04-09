@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import Questions from "@/types/Questions";
+import Questions from "@/types/questions";
 import ImageTile from "./ImageTile";
 
 export default function Questionnaire({
