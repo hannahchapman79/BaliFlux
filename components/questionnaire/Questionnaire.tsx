@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Questions from "@/types/questions";
 import ImageTile from "./ImageTile";
+import { generateItinerary } from "@/lib/actions/generateItinerary";
 
 export default function Questionnaire({
   questions,
@@ -20,8 +21,20 @@ export default function Questionnaire({
     .toLowerCase()
     .includes("how many days");
 
-  const onSubmit = (data: any) => {
-    console.log("Submitted answers:", data);
+  const onSubmit = async (data: any) => {
+    const submittedAnswers = {
+      interests: data["question_67626589287c6db5b1ccacb1"],
+      cuisine: data["question_67626589287c6db5b1ccacb2"],
+      vibe: data["question_67626589287c6db5b1ccacb3"],
+      nature: data["question_67626589287c6db5b1ccacb4"],
+      travelStyle: data["question_67626589287c6db5b1ccacb5"],
+      tripLength: data["question_67626589287c6db5b1ccacb6"],
+    };
+
+    if (submittedAnswers.tripLength) {
+      const response = await generateItinerary(submittedAnswers);
+      console.log("Response from server:", response);
+    }
   };
 
   return (
