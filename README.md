@@ -1,6 +1,4 @@
-# TogetherEvents
-
-Hosted version: https://together-events.vercel.app/
+# Bali Flux
 
 ## Table of Contents
 
@@ -16,7 +14,7 @@ Hosted version: https://together-events.vercel.app/
 
 ## Description
 
-TogetherEvents Frontend is a Next.js and React web application that provides the user interface for a community events platform. It enables users to browse, sign up for, and manage events while integrating authentication and authorisation features. The UI is built with Tailwind CSS and Hero UI.
+Bali Flux is a Next.js and React front end that brings together AI & local knowledge to generate a personalised itinerary. The UI is built with Tailwind CSS and Hero UI.
 
 ### Tech Stack
 
@@ -29,8 +27,8 @@ TogetherEvents Frontend is a Next.js and React web application that provides the
 
 ### Backend Repository
 
-The backend for TogetherEvents is available here: [TogetherEvents-BE](https://github.com/hannahchapman79/TogetherEvents-BE)  
-It was built using Node.js, JavaScript, Express, MongoDB, Bcrypt for password hashing and JWT.  
+The backend for Bali Flux is available here: https://github.com/hannahchapman79/BaliFlux-backend
+It was built using Node.js, JavaScript, Express, MongoDB, Bcrypt for password hashing, JWT intergrated with .  
 <br>
 ![NodeJS](https://img.shields.io/badge/node.js-%23518F4C?style=for-the-badge&logo=node.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
