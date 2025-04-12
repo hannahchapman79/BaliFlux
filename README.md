@@ -27,7 +27,7 @@ Bali Flux is a Next.js and React front end that brings together AI & local knowl
 
 ### Backend Repository
 
-The backend for Bali Flux is available here: https://github.com/hannahchapman79/BaliFlux-backend
+The backend for Bali Flux is available here: https://github.com/hannahchapman79/BaliFlux-backend.  
 It was built using Node.js, JavaScript, Express, MongoDB, Bcrypt for password hashing, JWT intergrated with .  
 <br>
 ![NodeJS](https://img.shields.io/badge/node.js-%23518F4C?style=for-the-badge&logo=node.js&logoColor=white)
