@@ -27,8 +27,6 @@ const AVAILABLE_IMAGES = [
   "sunset-seminyak-beach",
   "merlins-ubud",
   "single-fin",
-
-
 ];
 
 // Categorised fallback images based on keywords
@@ -97,7 +95,6 @@ export default function ActivityCard({ activity }: Props) {
         <strong>Cost:</strong> {activity.details.cost} |{" "}
         <strong>Duration:</strong> {activity.details.duration} |{" "}
         <strong>Notes:</strong> {activity.details.notes}
-        <strong>imagePlace:</strong> {activity.imagePlace}
       </p>
     </li>
   );
