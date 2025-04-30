@@ -17,8 +17,6 @@ const AVAILABLE_IMAGES = [
   "leke-leke-waterfall",
   "tukad-cepung-waterfall",
   "manta-ray-point",
-  "nusa-lembongan",
-  "nusa-penida",
   "sa-mesa-restaurant",
   "uluwatu-temple",
   "tegalalang-rice-terrace",
@@ -27,6 +25,9 @@ const AVAILABLE_IMAGES = [
   "tirta-empul-temple",
   "campuhan-ridge-walk",
   "sunset-seminyak-beach",
+  "merlins-ubud",
+  "single-fin",
+
 
 ];
 
@@ -42,6 +43,13 @@ const CATEGORY_FALLBACKS = [
   { keyword: "spa", fallback: "/itinerary/fallback-spa.jpg" },
   { keyword: "mount", fallback: "/itinerary/fallback-mount.jpg" },
   { keyword: "surfing", fallback: "/itinerary/fallback-surfing.jpg" },
+  { keyword: "brunch", fallback: "/itinerary/fallback-brunch.jpg" },
+  { keyword: "volcano", fallback: "/itinerary/fallback-volcano.jpg" },
+  { keyword: "cave", fallback: "/itinerary/fallback-cave.jpg" },
+  { keyword: "gym", fallback: "/itinerary/fallback-gym.jpg" },
+  { keyword: "uluwatu", fallback: "/itinerary/fallback-uluwatu.jpg" },
+  { keyword: "penida", fallback: "/itinerary/nusa-penida.jpg" },
+  { keyword: "lembongan", fallback: "/itinerary/nusa-lembongan.jpg" },
 ];
 
 export default function ActivityCard({ activity }: Props) {
@@ -89,6 +97,7 @@ export default function ActivityCard({ activity }: Props) {
         <strong>Cost:</strong> {activity.details.cost} |{" "}
         <strong>Duration:</strong> {activity.details.duration} |{" "}
         <strong>Notes:</strong> {activity.details.notes}
+        <strong>imagePlace:</strong> {activity.imagePlace}
       </p>
     </li>
   );
