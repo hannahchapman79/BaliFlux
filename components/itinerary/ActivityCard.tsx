@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Activity } from "@/context/ItineraryContext";
+import { Clock, DollarSign, FileText } from "lucide-react";
 
 type Props = {
   activity: Activity;
@@ -53,6 +54,7 @@ const CATEGORY_FALLBACKS = [
 export default function ActivityCard({ activity }: Props) {
   const [imgSrc, setImgSrc] = useState("/itinerary/fallback.jpg");
   const [isLoading, setIsLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const { imagePlace, title } = activity;
@@ -75,27 +77,62 @@ export default function ActivityCard({ activity }: Props) {
     setIsLoading(false);
   }, [activity]);
 
+  const handleImageError = () => {
+    setImageError(true);
+    setImgSrc("/itinerary/fallback.jpg");
+  };
+
   return (
-    <li className="p-4 rounded-xl shadow-md hover:shadow-lg transition">
-      <div className="relative w-full h-48 mb-3 rounded-lg overflow-hidden">
+    <li className="group relative bg-gray-800/60 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 border border-gray-700/50 hover:border-blue-500/30 flex flex-col">
+      <div className="relative w-full h-48 overflow-hidden">
         {isLoading ? (
-          <div className="w-full h-full animate-pulse rounded-lg" />
+          <div className="w-full h-full bg-gray-700 animate-pulse rounded-t-lg" />
         ) : (
-          <img
-            src={imgSrc}
-            alt={activity.title}
-            className="object-cover w-full h-full rounded-lg"
-          />
+          <>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10" />
+            <img
+              src={imageError ? "/itinerary/fallback.jpg" : imgSrc}
+              alt={activity.title}
+              className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110"
+              onError={handleImageError}
+            />
+          </>
         )}
+        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+          <h3 className="text-lg font-bold text-white drop-shadow-md">
+            {activity.title}
+          </h3>
+        </div>
       </div>
 
-      <h3 className="text-lg font-bold">{activity.title}</h3>
-      <p className="text-sm">{activity.description}</p>
-      <p className="text-sm mt-2">
-        <strong>Cost:</strong> {activity.details.cost} |{" "}
-        <strong>Duration:</strong> {activity.details.duration} |{" "}
-        <strong>Notes:</strong> {activity.details.notes}
-      </p>
+      <div className="p-4 flex-1 flex flex-col">
+        <p className="text-sm text-gray-300 mb-4 flex-1">
+          {activity.description}
+        </p>
+
+        <div className="space-y-2 mt-auto text-xs">
+          <div className="flex items-center space-x-2">
+            <div className="rounded-full p-1 bg-gray-700/50">
+              <DollarSign className="w-3 h-3 text-green-400" />
+            </div>
+            <span className="text-gray-300">{activity.details.cost}</span>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <div className="rounded-full p-1 bg-gray-700/50">
+              <Clock className="w-3 h-3 text-blue-400" />
+            </div>
+            <span className="text-gray-300">{activity.details.duration}</span>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <div className="rounded-full p-1 bg-gray-700/50">
+              <FileText className="w-3 h-3 text-purple-400" />
+            </div>
+            <span className="text-gray-300">{activity.details.notes}</span>
+          </div>
+        </div>
+      </div>
     </li>
   );
 }
