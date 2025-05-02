@@ -77,7 +77,6 @@ export default function ItineraryPage() {
         </div>
 
         <div className="relative">
-
           {loaded && (
             <>
               <button
@@ -100,7 +99,6 @@ export default function ItineraryPage() {
             </>
           )}
 
-
           <div ref={sliderRef} className="keen-slider overflow-visible">
             {itinerary.days.map((day, index) => (
               <div key={index} className="keen-slider__slide">
@@ -120,7 +118,6 @@ export default function ItineraryPage() {
             ))}
           </div>
         </div>
-
 
         {loaded && (
           <div className="flex justify-center gap-3 mt-8">
