@@ -5,16 +5,15 @@ export const fetchQuestions = async () => {
     questions: [
       {
         _id: "67626589287c6db5b1ccacb1",
-        question: "What type of experiences or vibes are you seeking?",
+        question: "Which vibe best matches how you want to spend your time?",
         answers: [
           "Relaxed",
           "Cultural Immersion",
-          "Spa & Wellness",
-          "Nightlife",
-          "Spiritual & Serene",
-          "Hidden Gems",
+          "Social & Nightlife",
+          "Spiritual or Mindful Retreat",
+          "Off the Beaten Path",
           "Focused & Productive",
-          "Adventure Sports",
+          "Adventure & Activities",
         ],
       },
       {
