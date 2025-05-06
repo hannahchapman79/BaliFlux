@@ -57,17 +57,15 @@ export default function Questionnaire({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 px-4 py-8 md:py-12">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
+    <div className="min-h-screen px-4">
+      <div className="max-w-6xl mx-auto py-16 md:py-24">
         <div className="mb-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
             Plan Your Perfect Trip
           </h1>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Tell us about your preferences so we can create a personalized
-            itinerary just for you.
+            Tell us about your preferences so we can create a personalised itinerary just for you.
           </p>
         </div>
 
@@ -79,7 +77,7 @@ export default function Questionnaire({
           ></div>
         </div>
 
-        <div className="bg-gray-800/40 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg border border-gray-700/30">
+        <div className="bg-gray-800/40 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg border border-gray-700/30 md:w-[70vw]">
           <form
             onSubmit={handleSubmit(onSubmit)}
             onKeyDown={(e) => {
@@ -92,7 +90,7 @@ export default function Questionnaire({
             }}
             className="space-y-8"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 md:h-[460px] transition-all duration-300">
               <h2 className="text-xl md:text-2xl font-bold text-gray-100">
                 {currentQuestion.question}
               </h2>

@@ -39,21 +39,21 @@ export default function Navbar() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Create trip", href: "/create-trip" },
+    { label: "Create Trip", href: "/create-trip" },
     { label: "Blog", href: "/blog" },
   ];
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-[#1A1F24]/80 backdrop-blur-md z-[1000] shadow-lg w-[90%] max-w-4xl ${
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-[1000] w-[90%] max-w-4xl ${
         isOpen ? "rounded-xl py-4" : "rounded-full py-3"
-      } px-6`}
+      } px-6 bg-gray-800/80 backdrop-blur-md shadow-lg border border-gray-700/50`}
       style={{ transition: "height 0.3s, padding 0.3s" }}
     >
       <div className="flex items-center justify-between">
         <Link
           href="/"
-          className="text-[1.6rem] font-semibold text-accent"
+          className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400"
           onClick={handleClose}
         >
           BaliFlux
@@ -65,14 +65,17 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`relative text-[1.3rem] font-light px-4 py-2 transition-colors duration-200 ${
+                className={`relative text-lg font-medium px-4 py-2 transition-colors duration-200 ${
                   isActive(href)
-                    ? "text-accent font-medium"
-                    : "text-offwhite hover:text-[#e7d7c1]"
+                    ? "text-blue-400"
+                    : "text-gray-300 hover:text-blue-300"
                 }`}
                 onClick={handleClose}
               >
                 {label}
+                {isActive(href) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500 mx-auto rounded-full"></span>
+                )}
               </Link>
             </li>
           ))}
@@ -80,7 +83,7 @@ export default function Navbar() {
 
         {/* Mobile toggle button */}
         <button
-          className="md:hidden text-offwhite focus:outline-none"
+          className="md:hidden text-gray-300 focus:outline-none"
           onClick={toggleNavbar}
           aria-label="Toggle menu"
         >
@@ -96,10 +99,10 @@ export default function Navbar() {
               <li key={href}>
                 <Link
                   href={href}
-                  className={`block text-[1.2rem] font-light px-4 py-2 rounded-md transition-colors duration-200 ${
+                  className={`block text-lg font-medium px-4 py-2 rounded-md transition-colors duration-200 ${
                     isActive(href)
-                      ? "bg-accent/10 text-accent font-medium"
-                      : "text-offwhite hover:bg-white/5 hover:text-[#e7d7c1]"
+                      ? "bg-blue-500/10 text-blue-400"
+                      : "text-gray-300 hover:bg-gray-700/50 hover:text-blue-300"
                   }`}
                   onClick={handleClose}
                 >
