@@ -9,7 +9,7 @@ export default function Footer() {
             href="/"
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400 mb-4 md:mb-0"
           >
-            BaliFlux
+            BaliGuide
           </Link>
 
           <ul className="flex flex-wrap justify-center space-x-6 text-base">
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="/blog"
                 className="hover:text-blue-400 transition-colors"
               >
-                Blog
+                About
               </Link>
             </li>
           </ul>
@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="pt-6 border-t border-gray-700/30 text-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} BaliFlux - Your Perfect Bali Itinerary
+            © {new Date().getFullYear()} BaliGuide - Your Perfect Bali Itinerary
             Generator
           </p>
         </div>

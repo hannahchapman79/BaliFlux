@@ -40,7 +40,7 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Create Trip", href: "/create-trip" },
-    { label: "Blog", href: "/blog" },
+    { label: "About", href: "/about" },
   ];
 
   return (
@@ -56,7 +56,7 @@ export default function Navbar() {
           className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400"
           onClick={handleClose}
         >
-          BaliFlux
+          BaliGuide
         </Link>
 
         {/* Desktop Nav */}

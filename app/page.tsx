@@ -42,7 +42,7 @@ export default function Page() {
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
-              Why Choose BaliFlux?
+              Why Choose BaliGuide?
             </h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">

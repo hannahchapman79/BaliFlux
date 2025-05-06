@@ -10,7 +10,7 @@ import { ItineraryProvider } from "@/context/ItineraryContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bali Flux",
+  title: "Bali Guide",
   description:
     "AI & local knowledge powered travel planning app for Bali, Indonesia",
 };
