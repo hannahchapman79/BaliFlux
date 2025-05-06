@@ -1,4 +1,4 @@
-# Bali Flux
+# Bali Guide
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-Bali Flux is a Next.js and React front end that brings together AI & local knowledge to generate a personalised itinerary. The UI is built with Tailwind CSS and Hero UI.
+Bali Guide is a Next.js and React front end that brings together AI & local knowledge to generate a personalised itinerary. The UI is built with Tailwind CSS and Hero UI.
 
 ### Tech Stack
 
@@ -27,7 +27,7 @@ Bali Flux is a Next.js and React front end that brings together AI & local knowl
 
 ### Backend Repository
 
-The backend for Bali Flux is available here: https://github.com/hannahchapman79/BaliFlux-backend. <br><br>
+The backend for Bali Guide is available here: https://github.com/hannahchapman79/BaliGuide-backend. <br><br>
 It was built using Node.js, JavaScript, Express, MongoDB, Bcrypt for password hashing, JWT and intergrated with AI Model, Meta Llama-4-Maverick.  
 <br>
 ![NodeJS](https://img.shields.io/badge/node.js-%23518F4C?style=for-the-badge&logo=node.js&logoColor=white)
