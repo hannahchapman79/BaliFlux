@@ -13,6 +13,7 @@
     "@heroui/react": "^2.7.5",
     "axios": "^1.8.4",
     "keen-slider": "^6.8.6",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.487.0",
     "next": "15.2.4",
     "react": "^19.0.0",

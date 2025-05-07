@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
-import Loading from "./loading";
 import Footer from "@/components/navigation/Footer";
 import Navbar from "@/components/navigation/Navbar";
 import { ItineraryProvider } from "@/context/ItineraryContext";
@@ -29,7 +27,9 @@ export default function RootLayout({
 
         <ItineraryProvider>
           <Navbar />
-          <main className="flex-1 pt-16">{children}</main>
+          <main className="flex-1 pt-16">
+            {children}
+          </main>
           <Footer />
         </ItineraryProvider>
       </body>
