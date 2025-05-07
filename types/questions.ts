@@ -1,7 +1,9 @@
-export default interface Questions {
+
+export type Questions = {
   _id: string;
   question: string;
-  description: string;
   answers: string[];
-  __v: number;
-}
+  type?: string;
+  description?: string;
+  __v?: number;
+};

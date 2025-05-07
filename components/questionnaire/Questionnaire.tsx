@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import Questions from "@/types/questions";
+import {Questions} from "@/types/questions";
 import { generateItinerary } from "@/lib/actions/generateItinerary";
 import { useRouter } from "next/navigation";
 import { useItinerary } from "@/context/ItineraryContext";
