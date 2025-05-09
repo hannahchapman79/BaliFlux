@@ -28,6 +28,7 @@ const AVAILABLE_IMAGES = [
   "sunset-seminyak-beach",
   "merlins-ubud",
   "single-fin",
+  "la-brisa",
 ];
 
 // Categorised fallback images based on keywords
