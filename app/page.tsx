@@ -7,21 +7,21 @@ import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 export default function Page() {
   const features = [
     {
-      title: "Personalized Experiences",
+      title: "Tailored to You",
       description:
-        "Tailored itineraries based on your unique interests and preferences",
+        "Your trip, your way — crafted from your preferences in seconds",
       icon: Star,
     },
     {
-      title: "Save Planning Time",
+      title: "Fast, Hassle-Free Planning",
       description:
-        "Create your perfect trip in minutes instead of hours of research",
+        "Skip the research rabbit hole and get a ready-to-go itinerary instantly",
       icon: Clock,
     },
     {
-      title: "Local Hidden Gems",
+      title: "Personal Picks & Hidden Gems",
       description:
-        "Discover secret spots and authentic experiences beyond tourist traps",
+        "Built with lived-in recommendations and hidden gems you won’t find on TripAdvisor",
       icon: MapPin,
     },
   ];
