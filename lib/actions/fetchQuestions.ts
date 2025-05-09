@@ -25,7 +25,7 @@ export const fetchQuestions = async () => {
           "Scenic Spots",
           "Brunch Cafes",
           "Coffee Culture",
-          "Fine Dining",
+          "Unique Dining",
           "Any top rated",
         ],
       },

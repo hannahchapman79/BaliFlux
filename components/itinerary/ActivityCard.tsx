@@ -29,6 +29,11 @@ const AVAILABLE_IMAGES = [
   "merlins-ubud",
   "single-fin",
   "la-brisa",
+  "jungle-fish",
+  "ankhusa-restaurant",
+  "nirvana-fitness",
+  "dreamland-beach",
+  "bali-social-club"
 ];
 
 // Categorised fallback images based on keywords
@@ -50,6 +55,7 @@ const CATEGORY_FALLBACKS = [
   { keyword: "uluwatu", fallback: "/itinerary/fallback-uluwatu.jpg" },
   { keyword: "penida", fallback: "/itinerary/nusa-penida.jpg" },
   { keyword: "lembongan", fallback: "/itinerary/nusa-lembongan.jpg" },
+  { keyword: "social club", fallback: "/itinerary/padel.jpg" },
 ];
 
 export default function ActivityCard({ activity }: Props) {
