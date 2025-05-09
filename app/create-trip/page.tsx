@@ -1,6 +1,6 @@
 import { fetchQuestions } from "@/lib/actions/fetchQuestions";
 import Questionnaire from "@/components/questionnaire/Questionnaire";
-import { Questions } from "@/types/questions"; 
+import { Questions } from "@/types/questions";
 
 export default async function QuestionnairePage() {
   const { questions } = await fetchQuestions();

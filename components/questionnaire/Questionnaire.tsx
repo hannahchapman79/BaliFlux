@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import {Questions} from "@/types/questions";
+import { Questions } from "@/types/questions";
 import { generateItinerary } from "@/lib/actions/generateItinerary";
 import { useRouter } from "next/navigation";
 import { useItinerary } from "@/context/ItineraryContext";
@@ -66,7 +66,8 @@ export default function Questionnaire({
           </h1>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6 rounded-full"></div>
           <p ref={questionRef} className="text-gray-300 max-w-2xl mx-auto">
-            Tell us about your preferences so we can create a personalised itinerary just for you.
+            Tell us about your preferences so we can create a personalised
+            itinerary just for you.
           </p>
         </div>
 
@@ -154,15 +155,18 @@ export default function Questionnaire({
 
               {currentQuestionIndex < questions.length - 1 ? (
                 <button
-  type="button"
-  onClick={() => {
-    setCurrentQuestionIndex((prev) => prev + 1);
-    setTimeout(() => {
-      questionRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }, 100);
-  }}
-  className="flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg hover:from-blue-500 hover:to-blue-400 transition shadow-md"
->
+                  type="button"
+                  onClick={() => {
+                    setCurrentQuestionIndex((prev) => prev + 1);
+                    setTimeout(() => {
+                      questionRef.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                      });
+                    }, 100);
+                  }}
+                  className="flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg hover:from-blue-500 hover:to-blue-400 transition shadow-md"
+                >
                   Next
                   <ChevronRight className="w-4 h-4 ml-2" />
                 </button>

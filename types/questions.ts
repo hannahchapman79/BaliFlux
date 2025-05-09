@@ -1,4 +1,3 @@
-
 export type Questions = {
   _id: string;
   question: string;

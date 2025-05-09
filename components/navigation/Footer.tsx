@@ -39,8 +39,8 @@ export default function Footer() {
 
         <div className="pt-6 border-t border-gray-700/30 text-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} BaliGuide - Your Perfect Bali Itinerary
-            Generator
+            © {new Date().getFullYear()} BaliGuide - Your Perfect Bali
+            Itinerary Generator
           </p>
         </div>
       </div>
