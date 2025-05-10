@@ -18,12 +18,12 @@ const AVAILABLE_IMAGES = [
   "leke-leke-waterfall",
   "tukad-cepung-waterfall",
   "manta-ray-point",
-  "sa-mesa-restaurant",
+  "sa-mesa",
   "uluwatu-temple",
   "tegalalang-rice-terrace",
   "jatiluwih-rice-terrace",
   "ulun-danu-beratan-temple",
-  "tirta-empul-temple",
+  "tirta-empul",
   "campuhan-ridge-walk",
   "sunset-seminyak-beach",
   "merlins-ubud",
@@ -33,7 +33,11 @@ const AVAILABLE_IMAGES = [
   "ankhusa-restaurant",
   "nirvana-fitness",
   "dreamland-beach",
-  "bali-social-club"
+  "bali-social-club",
+  "ayung-river",
+  "goa-gajah",
+  "yoga-barn"
+
 ];
 
 // Categorised fallback images based on keywords
@@ -107,7 +111,7 @@ export default function ActivityCard({ activity }: Props) {
         )}
         <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
           <h3 className="text-lg font-bold text-white drop-shadow-md">
-            {activity.title}
+            {activity.title} 
           </h3>
         </div>
       </div>
