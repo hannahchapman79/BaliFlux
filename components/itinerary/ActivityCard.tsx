@@ -43,21 +43,16 @@ const AVAILABLE_IMAGES = [
   "devils-tear",
   "nusa-lembongan",
   "nusa-penida",
-  "yoga-bliss"
+  "yoga-bliss",
+  "mangrove-point",
 ];
 
 // Categorised fallback images based on keywords
 const CATEGORY_FALLBACKS = [
-  { keyword: "beach", fallback: "/itinerary/fallback-beach.jpg" },
-  { keyword: "waterfall", fallback: "/itinerary/fallback-waterfall.jpg" },
-  { keyword: "temple", fallback: "/itinerary/fallback-temple.jpg" },
-  { keyword: "restaurant", fallback: "/itinerary/fallback-restaurant.jpg" },
-  { keyword: "cafe", fallback: "/itinerary/fallback-cafe.jpg" },
-  { keyword: "coffee", fallback: "/itinerary/fallback-coffee.jpg" },
-  { keyword: "yoga", fallback: "/itinerary/fallback-yoga.jpg" },
-  { keyword: "spa", fallback: "/itinerary/fallback-spa.jpg" },
+  { keyword: "keliki", fallback: "/itinerary/keliki.jpg" },
   { keyword: "mount", fallback: "/itinerary/fallback-mount.jpg" },
   { keyword: "surfing", fallback: "/itinerary/fallback-surfing.jpg" },
+  { keyword: "campuhan", fallback: "/itinerary/campuhan-ridge-walk.jpg" },
   { keyword: "brunch", fallback: "/itinerary/fallback-brunch.jpg" },
   { keyword: "volcano", fallback: "/itinerary/fallback-volcano.jpg" },
   { keyword: "cave", fallback: "/itinerary/fallback-cave.jpg" },
@@ -66,12 +61,12 @@ const CATEGORY_FALLBACKS = [
   { keyword: "penida", fallback: "/itinerary/nusa-penida.jpg" },
   { keyword: "lembongan", fallback: "/itinerary/nusa-lembongan.jpg" },
   { keyword: "social club", fallback: "/itinerary/padel.jpg" },
+  { keyword: "padel", fallback: "/itinerary/bali-social-club.jpg" },
   { keyword: "rice", fallback: "/itinerary/rice-terraces.jpg" },
   { keyword: "rafting", fallback: "/itinerary/ayung-river.jpg" },
   { keyword: "mexicola", fallback: "/itinerary/motel-mexicola.jpg" },
   { keyword: "warung", fallback: "/itinerary/warung.jpg" },
   { keyword: "monkey", fallback: "/itinerary/fallback-monkey.jpg" },
-  { keyword: "keliki", fallback: "/itinerary/keliki.jpg" },
   { keyword: "mushroom", fallback: "/itinerary/mushroom.jpg" },
   { keyword: "sari", fallback: "/itinerary/sari.jpg" },
   { keyword: "lawn", fallback: "/itinerary/lawn.jpg" },
@@ -81,6 +76,18 @@ const CATEGORY_FALLBACKS = [
   { keyword: "manta", fallback: "/itinerary/manta.jpg" },
   { keyword: "billabong", fallback: "/itinerary/angel-billabong.jpg" },
   { keyword: "market", fallback: "/shopping.jpg" },
+  { keyword: "cooking", fallback: "/itinerary/cooking.jpg" },
+  { keyword: "snorkel", fallback: "/itinerary/mangrove-point.jpg" },
+  { keyword: "coworking", fallback: "/itinerary/coworking.jpg" },
+  { keyword: "merlins", fallback: "/itinerary/merlins-ubud.jpg" },
+  { keyword: "restaurant", fallback: "/itinerary/fallback-restaurant.jpg" },
+  { keyword: "temple", fallback: "/itinerary/fallback-temple.jpg" },
+  { keyword: "beach", fallback: "/itinerary/fallback-beach.jpg" },
+  { keyword: "waterfall", fallback: "/itinerary/fallback-waterfall.jpg" },
+  { keyword: "cafe", fallback: "/itinerary/fallback-cafe.jpg" },
+  { keyword: "coffee", fallback: "/itinerary/fallback-coffee.jpg" },
+  { keyword: "yoga", fallback: "/itinerary/fallback-yoga.jpg" },
+  { keyword: "spa", fallback: "/itinerary/fallback-spa.jpg" },
 ];
 
 export default function ActivityCard({ activity }: Props) {
