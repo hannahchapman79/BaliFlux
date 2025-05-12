@@ -36,8 +36,13 @@ const AVAILABLE_IMAGES = [
   "bali-social-club",
   "ayung-river",
   "goa-gajah",
-  "yoga-barn"
-
+  "yoga-barn",
+  "ubud-palace",
+  "chandra-yoga",
+  "crystal-bay",
+  "devils-tear",
+  "nusa-lembongan",
+  "nusa-penida",
 ];
 
 // Categorised fallback images based on keywords
@@ -60,6 +65,10 @@ const CATEGORY_FALLBACKS = [
   { keyword: "penida", fallback: "/itinerary/nusa-penida.jpg" },
   { keyword: "lembongan", fallback: "/itinerary/nusa-lembongan.jpg" },
   { keyword: "social club", fallback: "/itinerary/padel.jpg" },
+  { keyword: "rice", fallback: "/itinerary/rice-terraces.jpg" },
+  { keyword: "rafting", fallback: "/itinerary/ayung-river.jpg" },
+  { keyword: "mexicola", fallback: "/itinerary/motel-mexicola.jpg" },
+  { keyword: "warung", fallback: "/itinerary/warung.jpg" },
 ];
 
 export default function ActivityCard({ activity }: Props) {
