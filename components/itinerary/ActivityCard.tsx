@@ -43,6 +43,7 @@ const AVAILABLE_IMAGES = [
   "devils-tear",
   "nusa-lembongan",
   "nusa-penida",
+  "yoga-bliss"
 ];
 
 // Categorised fallback images based on keywords
@@ -69,6 +70,17 @@ const CATEGORY_FALLBACKS = [
   { keyword: "rafting", fallback: "/itinerary/ayung-river.jpg" },
   { keyword: "mexicola", fallback: "/itinerary/motel-mexicola.jpg" },
   { keyword: "warung", fallback: "/itinerary/warung.jpg" },
+  { keyword: "monkey", fallback: "/itinerary/fallback-monkey.jpg" },
+  { keyword: "keliki", fallback: "/itinerary/keliki.jpg" },
+  { keyword: "mushroom", fallback: "/itinerary/mushroom.jpg" },
+  { keyword: "sari", fallback: "/itinerary/sari.jpg" },
+  { keyword: "lawn", fallback: "/itinerary/lawn.jpg" },
+  { keyword: "kecak", fallback: "/itinerary/kecak.jpg" },
+  { keyword: "savaya", fallback: "/itinerary/savaya.jpg" },
+  { keyword: "diamond", fallback: "/itinerary/diamond.jpg" },
+  { keyword: "manta", fallback: "/itinerary/manta.jpg" },
+  { keyword: "billabong", fallback: "/itinerary/angel-billabong.jpg" },
+  { keyword: "market", fallback: "/shopping.jpg" },
 ];
 
 export default function ActivityCard({ activity }: Props) {
@@ -120,7 +132,7 @@ export default function ActivityCard({ activity }: Props) {
         )}
         <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
           <h3 className="text-lg font-bold text-white drop-shadow-md">
-            {activity.title} 
+            {activity.title}
           </h3>
         </div>
       </div>
