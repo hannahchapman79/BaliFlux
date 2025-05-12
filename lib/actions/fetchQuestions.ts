@@ -5,7 +5,7 @@ export const fetchQuestions = async () => {
     questions: [
       {
         _id: "67626589287c6db5b1ccacb1",
-        question: "Which vibe best matches how you want to spend your time?",
+        question: "Which vibes best match how you want to spend your time?",
         answers: [
           "Relaxed",
           "Cultural Immersion",
