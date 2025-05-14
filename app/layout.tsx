@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/navigation/Footer";
 import Navbar from "@/components/navigation/Navbar";
 import { ItineraryProvider } from "@/context/ItineraryContext";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
         </ItineraryProvider>
+        <Analytics />
       </body>
     </html>
   );

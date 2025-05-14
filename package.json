@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroui/react": "^2.7.5",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.8.4",
     "keen-slider": "^6.8.6",
     "lottie-react": "^2.4.1",
